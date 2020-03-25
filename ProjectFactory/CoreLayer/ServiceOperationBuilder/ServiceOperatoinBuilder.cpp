@@ -1,9 +1,17 @@
 
 #include <iostream>
 #include <vector>
+#include "OperationFactory/OperationFactory.h"
+#include "OperationFactory/ValidationOperationFactory/ValidationOperationFactory.h"
+#include "OperationFactory/LogOperationFactory/LogOperationFactory.h"
+#include "OperationFactory/NetworkOperationFactory/NetworkOperationFactory.h"
+#include "OperationFactory/RequestConfigurationOperationFactory/RequestConfigurationOperationFactory.h"
+#include "../ServiceConfig.h"
+#include "OperationFactory/DeserializationOperationFactory/DeserializationOperationFactory.h"
 #include"ServiceOperatoinBuilder.h"
 #include"../Operations/Operation.h"
-#include "../Operations/DeserializationOperation/DeserializationOperation.h"
+
+
 #include"../Operations/DeserializationOperation/DeserializationOperation.h"
 #include"../Operations/LogOperation/LogOperation.h"
 #include"../Operations/NetworkOperation/NetworkOperation.h"
@@ -13,14 +21,16 @@
 
 using namespace std;
 
-vector <Operation*> ServiceOperatoinBuilder::obtainOperations()
+vector <Operation*> ServiceOperatoinBuilder::obtainOperations(ServiceConfig* config)
 {
 	vector <Operation*> operationsVector;
-	operationsVector.push_back(new SerializationOperation);
-	operationsVector.push_back(new RequestConfigurationOperation);
-	operationsVector.push_back(new NetworkOperation);
-	operationsVector.push_back(new LogOperation);
-	operationsVector.push_back(new ValidationOperation);
-	operationsVector.push_back(new DeserializationOperation);
+	
+	for (OperationFactory* someOp : operationFactories)
+	{
+		if(someOp->canCreate(config) == true)
+		operationsVector.push_back(someOp->create(config));
+	}
+
 	return operationsVector;
 }
+

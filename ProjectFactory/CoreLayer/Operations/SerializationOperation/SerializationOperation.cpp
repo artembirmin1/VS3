@@ -2,8 +2,8 @@
 #include <iostream> 
 #include "SerializationOperation.h"
 #include "../Operation.h"
-
-void SerializationOperation::execute()
+template <typename T>
+void SerializationOperation<T>::execute()
 {
-    cout << "S";
+    cout << serializationOperationData;
 }

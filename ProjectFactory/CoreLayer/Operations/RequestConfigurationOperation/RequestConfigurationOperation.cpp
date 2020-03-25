@@ -4,5 +4,5 @@
 
 void RequestConfigurationOperation::execute()
 {
-    cout << "R";
+    cout << requestConfigurationData;
 }

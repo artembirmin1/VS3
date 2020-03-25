@@ -3,11 +3,12 @@
 
 #include <iostream> 
 #include "../Operation.h"
-
+template <typename T>
 class SerializationOperation : public Operation
 {
 public:
-     void execute() override;
+    T* serializationOperationData;
+    void execute() override;
 };
 
 #endif

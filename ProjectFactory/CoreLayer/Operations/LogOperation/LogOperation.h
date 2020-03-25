@@ -3,10 +3,12 @@
 
 #include <iostream> 
 #include "../Operation.h"
+#include "../../ServiceConfig.h"
 
 class LogOperation : public Operation
 {
 public:
+    LogOperationEnumData* logOperationData;
      void execute();
 };
 

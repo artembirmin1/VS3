@@ -15,28 +15,46 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="CoreLayer\ServiceOperationBuilder\ServiceOperatoinBuilder.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="CoreLayer\Operations\SerializationOperation\SerializationOperation.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="CoreLayer\Operations\RequestConfigurationOperation\RequestConfigurationOperation.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="CoreLayer\Operations\LogOperation\LogOperation.cpp">
+    <ClCompile Include="CoreLayer\ServiceOperationBuilder\OperationFactory\ValidationOperationFactory\ValidationOperationFactory.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="CoreLayer\Operations\DeserializationOperation\DeserializationOperation.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="CoreLayer\Operations\ValidationOperation\ValidationOperation.cpp">
+    <ClCompile Include="CoreLayer\Operations\LogOperation\LogOperation.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="CoreLayer\Operations\NetworkOperation\NetworkOperation.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreLayer\Operations\SerializationOperation\SerializationOperation.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreLayer\ServiceOperationBuilder\ServiceOperatoinBuilder.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreLayer\Operations\RequestConfigurationOperation\RequestConfigurationOperation.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreLayer\Operations\ValidationOperation\ValidationOperation.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreLayer\ServiceOperationBuilder\OperationFactory\DeserializationOperationFactory\DeserializationOperationFactory.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreLayer\ServiceOperationBuilder\OperationFactory\LogOperationFactory\LogOperationFactory.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreLayer\ServiceOperationBuilder\OperationFactory\NetworkOperationFactory\NetworkOperationFactory.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreLayer\ServiceOperationBuilder\OperationFactory\RequestConfigurationOperationFactory\RequestConfigurationOperationFactory.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreLayer\ServiceOperationBuilder\OperationFactory\SerializationOperationFactory\SerializationOperationFactory.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

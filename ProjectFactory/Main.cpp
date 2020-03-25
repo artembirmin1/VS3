@@ -1,6 +1,8 @@
 
 #include <iostream> 
 #include <vector>
+#include <string>
+#include "CoreLayer/ServiceConfig.h"
 #include"CoreLayer/ServiceOperationBuilder/ServiceOperatoinBuilder.h"
 #include"CoreLayer/Operations/DeserializationOperation/DeserializationOperation.h"
 #include"CoreLayer/Operations/LogOperation/LogOperation.h"
@@ -10,28 +12,23 @@
 #include "CoreLayer/Operations/SerializationOperation/SerializationOperation.h"
 
 using namespace std;
-
-vector <Operation*> obtainOperations()
-{
-	vector <Operation*> operationsVector;
-	operationsVector.push_back(new SerializationOperation);
-	operationsVector.push_back(new RequestConfigurationOperation);
-	operationsVector.push_back(new NetworkOperation);
-	operationsVector.push_back(new LogOperation);
-	operationsVector.push_back(new ValidationOperation);
-	operationsVector.push_back(new DeserializationOperation);
-	return operationsVector;
-}
-
+template <typename T>
 int main()
 {
-	ServiceOperatoinBuilder* b = new ServiceOperatoinBuilder;
-	vector <Operation*> a = b->obtainOperations();
-	a = obtainOperations();
+	string reConOp = "Owrekog";
+	int netOp = 234;
+	LogOperationEnumData logOp = LogOperationEnumData::debug; //только так, ибо enum class
+	bool* valOp = new bool;
+	bool g;
+	int a;
+	vector <string> desOp;
+	desOp.push_back("kekfke");
+	ServiceConfig* config = new ServiceConfig(&(a=31),"qeqeqe", 3131,&logOp , &(g = 1), desOp);
+	ServiceOperatoinBuilder* b = new ServiceOperatoinBuilder();
+	vector <Operation*> a = b->obtainOperations(config);
 	for (Operation* c : a)
 	{
 		c->execute();
 		cout << " ";
 	}
 }
-

@@ -144,6 +144,12 @@
     <ClCompile Include="CoreLayer\Operations\RequestConfigurationOperation\RequestConfigurationOperation.cpp" />
     <ClCompile Include="CoreLayer\Operations\SerializationOperation\SerializationOperation.cpp" />
     <ClCompile Include="CoreLayer\Operations\ValidationOperation\ValidationOperation.cpp" />
+    <ClCompile Include="CoreLayer\ServiceOperationBuilder\OperationFactory\DeserializationOperationFactory\DeserializationOperationFactory.cpp" />
+    <ClCompile Include="CoreLayer\ServiceOperationBuilder\OperationFactory\LogOperationFactory\LogOperationFactory.cpp" />
+    <ClCompile Include="CoreLayer\ServiceOperationBuilder\OperationFactory\NetworkOperationFactory\NetworkOperationFactory.cpp" />
+    <ClCompile Include="CoreLayer\ServiceOperationBuilder\OperationFactory\RequestConfigurationOperationFactory\RequestConfigurationOperationFactory.cpp" />
+    <ClCompile Include="CoreLayer\ServiceOperationBuilder\OperationFactory\SerializationOperationFactory\SerializationOperationFactory.cpp" />
+    <ClCompile Include="CoreLayer\ServiceOperationBuilder\OperationFactory\ValidationOperationFactory\ValidationOperationFactory.cpp" />
     <ClCompile Include="CoreLayer\ServiceOperationBuilder\ServiceOperatoinBuilder.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>

@@ -2,12 +2,14 @@
 #define _R_H_
 
 #include <iostream> 
+#include <string>
 #include "../Operation.h"
 
 class RequestConfigurationOperation : public Operation
 {
 public:
-     void execute();
+    string requestConfigurationData;
+    void execute();
 };
 
 #endif

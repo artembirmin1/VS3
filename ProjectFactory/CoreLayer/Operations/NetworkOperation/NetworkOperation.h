@@ -7,6 +7,7 @@
 class NetworkOperation : public Operation
 {
 public:
+    int networkOperationData;
      void execute();
 };
 

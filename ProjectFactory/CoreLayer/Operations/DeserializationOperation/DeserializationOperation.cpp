@@ -1,10 +1,14 @@
 
 #include <iostream> 
 #include"DeserializationOperation.h"
+#include <string>
 
 using namespace std;
 
 void DeserializationOperation::execute() 
 {
-    cout << "D";
+	for (string c : deserializationOperationData)
+	{
+		cout << c;
+	}
 }
