@@ -4,12 +4,12 @@
 #include <iostream>
 #include "../../ServiceConfig.h"
 #include "../../Operations/Operation.h"
-template <typename T>
+
 class OperationFactory
 {
 public:
-	virtual bool canCreate(ServiceConfig<T>* config) = 0;
-	virtual Operation* create(ServiceConfig<T>* config) = 0;
+	virtual bool canCreate(ServiceConfig* config) = 0;
+	virtual Operation* create(ServiceConfig* config) = 0;
 };
 
 #endif

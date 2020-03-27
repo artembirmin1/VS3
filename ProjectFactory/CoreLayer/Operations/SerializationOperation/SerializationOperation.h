@@ -3,12 +3,15 @@
 
 #include <iostream> 
 #include "../Operation.h"
-template <typename T>
+
+template<typename T>
 class SerializationOperation : public Operation
 {
 public:
     T* serializationOperationData;
     void execute() override;
 };
+
+#include"SerializationOperation.cpp"
 
 #endif

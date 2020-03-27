@@ -12,19 +12,21 @@
 #include "CoreLayer/Operations/SerializationOperation/SerializationOperation.h"
 
 using namespace std;
-template <typename T>
+
 int main()
 {
+	string t;
+	
 	string reConOp = "Owrekog";
 	int netOp = 234;
 	LogOperationEnumData logOp = LogOperationEnumData::debug; //только так, ибо enum class
 	bool* valOp = new bool;
 	bool g;
-	int a;
 	vector <string> desOp;
 	desOp.push_back("kekfke");
-	ServiceConfig* config = new ServiceConfig(&(a=31),"qeqeqe", 3131,&logOp , &(g = 1), desOp);
-	ServiceOperatoinBuilder* b = new ServiceOperatoinBuilder();
+	//ServiceConfig* config = new ServiceConfig("qeqeqe", 3131,&logOp , &(g = 1), desOp);
+	GenericServiceConfig<string>* config = new GenericServiceConfig<string>(&(t="RABOTAET"), "qeqeqe", 3131, &logOp, &(g = 1), desOp);
+	ServiceOperatoinBuilder<string>* b = new ServiceOperatoinBuilder<string>();
 	vector <Operation*> a = b->obtainOperations(config);
 	for (Operation* c : a)
 	{

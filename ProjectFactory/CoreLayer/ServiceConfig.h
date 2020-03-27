@@ -15,16 +15,16 @@ enum class LogOperationEnumData
 	error,
 	verbose
 };
-template <typename T>
-struct ServiceConfig
+
+class ServiceConfig
 {
-	T* serializationOperationData;
+public:
 	string requestConfigurationOperationData;
 	int networkOperationData;
 	LogOperationEnumData* logOperationData = NULL;
 	bool* validationOperationData = NULL;
 	vector <string> deserializationOperationData;
-	ServiceConfig(T* serializationDate, string requestConfigurationData, int networkData, LogOperationEnumData* logData,
+	ServiceConfig( string requestConfigurationData, int networkData, LogOperationEnumData* logData,
 		bool* validationData, vector <string> deserializationData)
 	{
 		requestConfigurationOperationData = requestConfigurationData;
@@ -32,6 +32,25 @@ struct ServiceConfig
 		logOperationData = logData;
 		validationOperationData = validationData;
 		deserializationOperationData = deserializationData;
+	}
+};
+
+template<typename T>
+class GenericServiceConfig : public ServiceConfig
+{
+public:
+	T* serializationOperationData;
+	string requestConfigurationOperationData;
+	int networkOperationData;
+	LogOperationEnumData* logOperationData = NULL;
+	bool* validationOperationData = NULL;
+	vector <string> deserializationOperationData;
+	
+	GenericServiceConfig(T* serializationData, string requestConfigurationData, int networkData, LogOperationEnumData* logData,
+		bool* validationData, vector <string> deserializationData)
+		: ServiceConfig(requestConfigurationData, networkData, logData, validationData, deserializationData)
+	{
+		serializationOperationData = serializationData;
 	}
 };
 

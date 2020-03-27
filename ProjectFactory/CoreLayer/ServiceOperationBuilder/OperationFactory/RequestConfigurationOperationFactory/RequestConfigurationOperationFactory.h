@@ -3,7 +3,6 @@
 #include "../OperationFactory.h"
 #include "../../../Operations/RequestConfigurationOperation/RequestConfigurationOperation.h"
 #include "../../../ServiceConfig.h"
-
 class RequestConfigurationOperationFactory : public OperationFactory
 {
 public:

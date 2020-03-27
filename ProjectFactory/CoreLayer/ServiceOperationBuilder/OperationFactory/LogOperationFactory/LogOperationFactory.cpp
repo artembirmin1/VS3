@@ -4,16 +4,16 @@
 #include "../../../Operations/LogOperation/LogOperation.h"
 #include "../../../ServiceConfig.h"
 
-template <typename T>
-bool  LogOperationFactory<T>::canCreate(ServiceConfig<T>* config)
+
+bool  LogOperationFactory::canCreate(ServiceConfig* config)
 {
 	if (config->logOperationData == NULL)
 		return false;
 	else
 		return true;
 }
-template <typename T>
-Operation* LogOperationFactory<T>::create(ServiceConfig<T>* config)
+
+Operation* LogOperationFactory::create(ServiceConfig* config)
 {
 	LogOperation* logOp = new LogOperation;
 	logOp->logOperationData = config->logOperationData;

@@ -153,6 +153,9 @@
     <ClCompile Include="CoreLayer\ServiceOperationBuilder\ServiceOperatoinBuilder.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CoreLayer\ServiceOperationBuilder\OperationFactory\SerializationOperationFactory\SerializationOperationFactory.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

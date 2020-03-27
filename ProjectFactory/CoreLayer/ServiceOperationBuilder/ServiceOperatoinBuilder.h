@@ -13,19 +13,18 @@
 #include "OperationFactory/RequestConfigurationOperationFactory/RequestConfigurationOperationFactory.h"
 #include "../ServiceConfig.h"
 #include "OperationFactory/DeserializationOperationFactory/DeserializationOperationFactory.h"
-
-
-
+#include "OperationFactory/SerializationOperationFactory/SerializationOperationFactory.h"
 
 using namespace std;
-template <typename T>
+template<typename T>
 class ServiceOperatoinBuilder
 {
 public:
-	vector <OperationFactory<T>*> operationFactories;
-	vector <Operation*> obtainOperations(ServiceConfig<T>* config);
+	vector <OperationFactory*> operationFactories;
+	vector <Operation*> obtainOperations(ServiceConfig* config);
 	ServiceOperatoinBuilder()
 	{
+		operationFactories.push_back(new SerializationOperationFactory<T>);
 		operationFactories.push_back(new RequestConfigurationOperationFactory);
 		operationFactories.push_back(new NetworkOperationFactory);
 		operationFactories.push_back(new LogOperationFactory);
@@ -33,5 +32,7 @@ public:
 		operationFactories.push_back(new DeserializationOperationFactory);
 	}
 };
+
+#include "ServiceOperatoinBuilder.cpp"
 
 #endif

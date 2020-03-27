@@ -1,3 +1,5 @@
+#ifndef _SOB_CPP_
+#define _SOB_CPP_
 
 #include <iostream>
 #include <vector>
@@ -6,12 +8,10 @@
 #include "OperationFactory/LogOperationFactory/LogOperationFactory.h"
 #include "OperationFactory/NetworkOperationFactory/NetworkOperationFactory.h"
 #include "OperationFactory/RequestConfigurationOperationFactory/RequestConfigurationOperationFactory.h"
-#include "../ServiceConfig.h"
 #include "OperationFactory/DeserializationOperationFactory/DeserializationOperationFactory.h"
 #include"ServiceOperatoinBuilder.h"
 #include"../Operations/Operation.h"
-
-
+#include"../ServiceConfig.h"
 #include"../Operations/DeserializationOperation/DeserializationOperation.h"
 #include"../Operations/LogOperation/LogOperation.h"
 #include"../Operations/NetworkOperation/NetworkOperation.h"
@@ -21,7 +21,8 @@
 
 using namespace std;
 
-vector <Operation*> ServiceOperatoinBuilder::obtainOperations(ServiceConfig* config)
+template<typename T>
+vector <Operation*> ServiceOperatoinBuilder<T>::obtainOperations(ServiceConfig* config)
 {
 	vector <Operation*> operationsVector;
 	
@@ -33,4 +34,7 @@ vector <Operation*> ServiceOperatoinBuilder::obtainOperations(ServiceConfig* con
 
 	return operationsVector;
 }
+
+#endif
+
 

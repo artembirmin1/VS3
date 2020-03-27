@@ -2,7 +2,8 @@
 #include "RequestConfigurationOperationFactory.h"
 #include "../OperationFactory.h"
 #include "../../../Operations/RequestConfigurationOperation/RequestConfigurationOperation.h"
-#include "../../../ServiceConfig.h"
+
+#include"../../../ServiceConfig.h"
 
 bool  RequestConfigurationOperationFactory::canCreate(ServiceConfig* config)
 {
