@@ -9,7 +9,8 @@ class LogOperation : public Operation
 {
 public:
     LogOperationEnumData* logOperationData;
-     void execute();
+    void execute();
+    LogOperation(LogOperationEnumData* logOpData);
 };
 
 #endif

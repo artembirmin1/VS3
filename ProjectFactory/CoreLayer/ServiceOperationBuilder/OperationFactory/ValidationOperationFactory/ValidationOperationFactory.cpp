@@ -7,14 +7,10 @@
 
 bool  ValidationOperationFactory::canCreate(ServiceConfig* config)
 {
-	if (config->validationOperationData == NULL)
-		return 0;
-	else return 1;
+	return (config->validationOperationData != NULL);
 }
 
 Operation* ValidationOperationFactory::create(ServiceConfig* config)
 {
-	ValidationOperation* valOp = new ValidationOperation;
-	valOp->validationOperationData = config->validationOperationData;
-	return valOp;
+	return(new ValidationOperation(config->validationOperationData));
 }

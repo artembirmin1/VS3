@@ -11,7 +11,7 @@ bool  NetworkOperationFactory::canCreate(ServiceConfig* config)
 
 Operation* NetworkOperationFactory::create(ServiceConfig* config)
 {
-	NetworkOperation* netOp = new NetworkOperation;
-	netOp->networkOperationData = config->networkOperationData;
-	return netOp;
+	
+	
+	return (new NetworkOperation(config->networkOperationData));
 }

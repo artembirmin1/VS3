@@ -21,3 +21,8 @@ void LogOperation::execute()
         break;
 	}
 }
+
+LogOperation::LogOperation(LogOperationEnumData* logOpData)
+{
+    logOperationData = logOpData;
+}

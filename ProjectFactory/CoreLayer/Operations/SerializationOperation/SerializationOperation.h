@@ -10,6 +10,7 @@ class SerializationOperation : public Operation
 public:
     T* serializationOperationData;
     void execute() override;
+    SerializationOperation(T* serOpData);
 };
 
 #include"SerializationOperation.cpp"

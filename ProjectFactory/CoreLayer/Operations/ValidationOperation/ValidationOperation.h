@@ -6,10 +6,10 @@
 
 class ValidationOperation : public Operation
 {
-
 public:
     bool* validationOperationData = NULL;
     void execute();
+    ValidationOperation(bool* valOpData);
 };
 
 #endif

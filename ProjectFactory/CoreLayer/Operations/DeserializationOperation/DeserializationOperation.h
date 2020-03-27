@@ -12,6 +12,7 @@ class DeserializationOperation : public Operation
 public:
     vector <string> deserializationOperationData;
     void execute(); 
+    DeserializationOperation(vector <string> desOpData);
 };
 
 #endif

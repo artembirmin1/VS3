@@ -12,3 +12,8 @@ void DeserializationOperation::execute()
 		cout << c;
 	}
 }
+
+DeserializationOperation::DeserializationOperation(vector<string> desOpData)
+{
+	deserializationOperationData = desOpData;
+}

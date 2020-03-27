@@ -11,20 +11,14 @@ template<typename T>
 bool  SerializationOperationFactory<T>::canCreate(ServiceConfig* config)
 {
 	GenericServiceConfig<T>* config1 = static_cast<GenericServiceConfig<T>*>(config);
-	if (config1->serializationOperationData == NULL)
-		return false;
-	else
-		return true;
+	return (config1->serializationOperationData != NULL);
 }
 
 template<typename T>
 Operation* SerializationOperationFactory<T>::create(ServiceConfig* config)
 {
-
-	GenericServiceConfig<T>* config1 = static_cast<GenericServiceConfig<T>*>(config);
-	SerializationOperation<T>* serOp = new SerializationOperation<T>;
-	serOp->serializationOperationData = config1->serializationOperationData;
-	return serOp;
+	GenericServiceConfig<T>* genConfig = static_cast<GenericServiceConfig<T>*>(config);
+	return (new SerializationOperation<T>(genConfig->serializationOperationData));
 }
 
 #endif

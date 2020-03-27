@@ -11,7 +11,5 @@ bool  DeserializationOperationFactory::canCreate(ServiceConfig* config)
 
 Operation* DeserializationOperationFactory::create(ServiceConfig* config)
 {
-	DeserializationOperation* desOp = new DeserializationOperation;
-	desOp->deserializationOperationData = config->deserializationOperationData;
-	return desOp;
+	return (new DeserializationOperation(config->deserializationOperationData));
 }

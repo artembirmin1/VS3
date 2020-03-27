@@ -11,4 +11,10 @@ void SerializationOperation<T>::execute()
     cout << *serializationOperationData;
 }
 
+template<typename T>
+SerializationOperation<T>::SerializationOperation(T* serOpData)
+{
+    serializationOperationData = serOpData;
+}
+
 #endif 

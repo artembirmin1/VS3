@@ -6,3 +6,8 @@ void NetworkOperation::execute()
 {
     cout << networkOperationData;
 }
+
+NetworkOperation::NetworkOperation(int netOpData)
+{
+    networkOperationData = netOpData;
+}

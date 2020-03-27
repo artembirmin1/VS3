@@ -8,8 +8,9 @@
 class RequestConfigurationOperation : public Operation
 {
 public:
-    string requestConfigurationData;
+    string requestConfigurationOperationData;
     void execute();
+    RequestConfigurationOperation(string reqOpData);
 };
 
 #endif

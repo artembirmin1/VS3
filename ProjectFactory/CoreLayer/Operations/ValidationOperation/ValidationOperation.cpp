@@ -9,3 +9,9 @@ void ValidationOperation::execute()
 {
     cout << *validationOperationData;
 }
+
+ValidationOperation::ValidationOperation(bool* valOpData)
+{
+    validationOperationData = valOpData;
+}
+

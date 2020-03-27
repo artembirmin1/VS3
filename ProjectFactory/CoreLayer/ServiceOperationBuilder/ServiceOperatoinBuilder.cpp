@@ -25,13 +25,11 @@ template<typename T>
 vector <Operation*> ServiceOperatoinBuilder<T>::obtainOperations(ServiceConfig* config)
 {
 	vector <Operation*> operationsVector;
-	
 	for (OperationFactory* someOp : operationFactories)
 	{
 		if(someOp->canCreate(config) == true)
 		operationsVector.push_back(someOp->create(config));
 	}
-
 	return operationsVector;
 }
 

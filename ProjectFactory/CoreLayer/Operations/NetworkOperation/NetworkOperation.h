@@ -8,7 +8,8 @@ class NetworkOperation : public Operation
 {
 public:
     int networkOperationData;
-     void execute();
+    void execute();
+    NetworkOperation(int netOpData);
 };
 
 #endif

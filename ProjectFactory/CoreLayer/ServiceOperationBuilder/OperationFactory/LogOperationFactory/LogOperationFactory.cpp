@@ -4,18 +4,12 @@
 #include "../../../Operations/LogOperation/LogOperation.h"
 #include "../../../ServiceConfig.h"
 
-
 bool  LogOperationFactory::canCreate(ServiceConfig* config)
 {
-	if (config->logOperationData == NULL)
-		return false;
-	else
-		return true;
+	return (config->logOperationData != NULL);
 }
 
 Operation* LogOperationFactory::create(ServiceConfig* config)
 {
-	LogOperation* logOp = new LogOperation;
-	logOp->logOperationData = config->logOperationData;
-	return logOp;
+	return (new LogOperation(config->logOperationData));
 }

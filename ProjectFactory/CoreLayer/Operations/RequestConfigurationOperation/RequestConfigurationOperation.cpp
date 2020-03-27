@@ -4,5 +4,10 @@
 
 void RequestConfigurationOperation::execute()
 {
-    cout << requestConfigurationData;
+    cout << requestConfigurationOperationData;
+}
+
+RequestConfigurationOperation::RequestConfigurationOperation(string reqOpData)
+{
+    requestConfigurationOperationData = reqOpData;
 }

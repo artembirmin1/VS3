@@ -16,6 +16,7 @@
 #include "OperationFactory/SerializationOperationFactory/SerializationOperationFactory.h"
 
 using namespace std;
+
 template<typename T>
 class ServiceOperatoinBuilder
 {
