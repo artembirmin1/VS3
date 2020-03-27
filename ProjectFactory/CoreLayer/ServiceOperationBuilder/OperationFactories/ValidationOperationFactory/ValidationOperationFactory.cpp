@@ -1,6 +1,6 @@
 #include <iostream>
 #include "ValidationOperationFactory.h"
-#include "../OperationFactory.h"
+#include "../OperationFactories.h"
 #include "../../../Operations/ValidationOperation/ValidationOperation.h"
 #include "../../../ServiceConfig.h"
 
@@ -12,5 +12,5 @@ bool  ValidationOperationFactory::canCreate(ServiceConfig* config)
 
 Operation* ValidationOperationFactory::create(ServiceConfig* config)
 {
-	return(new ValidationOperation(config->validationOperationData));
+	return new ValidationOperation(config->validationOperationData);
 }

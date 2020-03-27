@@ -1,10 +1,10 @@
 #pragma once
 #include <iostream>
-#include "../OperationFactory.h"
+#include "../OperationFactories.h"
 #include "../../../ServiceConfig.h"
 #include "../../../Operations/LogOperation/LogOperation.h"
 
-class LogOperationFactory : public OperationFactory
+class LogOperationFactory : public OperationFactories
 {
 public:
 	bool canCreate(ServiceConfig* config);

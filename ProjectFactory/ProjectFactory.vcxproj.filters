@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CoreLayer\ServiceOperationBuilder\OperationFactory\ValidationOperationFactory\ValidationOperationFactory.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="CoreLayer\Operations\DeserializationOperation\DeserializationOperation.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
@@ -42,25 +39,23 @@
     <ClCompile Include="Main.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="CoreLayer\ServiceOperationBuilder\OperationFactory\DeserializationOperationFactory\DeserializationOperationFactory.cpp">
+    <ClCompile Include="CoreLayer\ServiceOperationBuilder\OperationFactories\DeserializationOperationFactory\DeserializationOperationFactory.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="CoreLayer\ServiceOperationBuilder\OperationFactory\LogOperationFactory\LogOperationFactory.cpp">
+    <ClCompile Include="CoreLayer\ServiceOperationBuilder\OperationFactories\LogOperationFactory\LogOperationFactory.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="CoreLayer\ServiceOperationBuilder\OperationFactory\NetworkOperationFactory\NetworkOperationFactory.cpp">
+    <ClCompile Include="CoreLayer\ServiceOperationBuilder\OperationFactories\NetworkOperationFactory\NetworkOperationFactory.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="CoreLayer\ServiceOperationBuilder\OperationFactory\RequestConfigurationOperationFactory\RequestConfigurationOperationFactory.cpp">
+    <ClCompile Include="CoreLayer\ServiceOperationBuilder\OperationFactories\RequestConfigurationOperationFactory\RequestConfigurationOperationFactory.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="CoreLayer\ServiceOperationBuilder\OperationFactory\SerializationOperationFactory\SerializationOperationFactory.cpp">
+    <ClCompile Include="CoreLayer\ServiceOperationBuilder\OperationFactories\SerializationOperationFactory\SerializationOperationFactory.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="CoreLayer\ServiceOperationBuilder\OperationFactory\SerializationOperationFactory\SerializationOperationFactory.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
+    <ClCompile Include="CoreLayer\ServiceOperationBuilder\OperationFactories\ValidationOperationFactory\ValidationOperationFactory.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

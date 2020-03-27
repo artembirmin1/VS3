@@ -3,12 +3,12 @@
 
 #include <iostream>
 #include <vector>
-#include "OperationFactory/OperationFactory.h"
-#include "OperationFactory/ValidationOperationFactory/ValidationOperationFactory.h"
-#include "OperationFactory/LogOperationFactory/LogOperationFactory.h"
-#include "OperationFactory/NetworkOperationFactory/NetworkOperationFactory.h"
-#include "OperationFactory/RequestConfigurationOperationFactory/RequestConfigurationOperationFactory.h"
-#include "OperationFactory/DeserializationOperationFactory/DeserializationOperationFactory.h"
+#include "OperationFactories/OperationFactories.h"
+#include "OperationFactories/ValidationOperationFactory/ValidationOperationFactory.h"
+#include "OperationFactories/LogOperationFactory/LogOperationFactory.h"
+#include "OperationFactories/NetworkOperationFactory/NetworkOperationFactory.h"
+#include "OperationFactories/RequestConfigurationOperationFactory/RequestConfigurationOperationFactory.h"
+#include "OperationFactories/DeserializationOperationFactory/DeserializationOperationFactory.h"
 #include"ServiceOperatoinBuilder.h"
 #include"../Operations/Operation.h"
 #include"../ServiceConfig.h"
@@ -25,7 +25,7 @@ template<typename T>
 vector <Operation*> ServiceOperatoinBuilder<T>::obtainOperations(ServiceConfig* config)
 {
 	vector <Operation*> operationsVector;
-	for (OperationFactory* someOp : operationFactories)
+	for (OperationFactories* someOp : operationFactories)
 	{
 		if(someOp->canCreate(config) == true)
 		operationsVector.push_back(someOp->create(config));

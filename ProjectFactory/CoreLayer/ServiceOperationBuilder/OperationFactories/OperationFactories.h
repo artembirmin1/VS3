@@ -5,7 +5,7 @@
 #include "../../ServiceConfig.h"
 #include "../../Operations/Operation.h"
 
-class OperationFactory
+class OperationFactories
 {
 public:
 	virtual bool canCreate(ServiceConfig* config) = 0;

@@ -1,6 +1,6 @@
 #include <iostream>
 #include "LogOperationFactory.h"
-#include "../OperationFactory.h"
+#include "../OperationFactories.h"
 #include "../../../Operations/LogOperation/LogOperation.h"
 #include "../../../ServiceConfig.h"
 
@@ -11,5 +11,5 @@ bool  LogOperationFactory::canCreate(ServiceConfig* config)
 
 Operation* LogOperationFactory::create(ServiceConfig* config)
 {
-	return (new LogOperation(config->logOperationData));
+	return new LogOperation(config->logOperationData);
 }

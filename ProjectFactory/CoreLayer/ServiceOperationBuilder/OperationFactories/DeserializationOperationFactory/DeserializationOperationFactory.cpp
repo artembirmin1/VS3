@@ -1,6 +1,6 @@
 #include <iostream>
 #include "DeserializationOperationFactory.h"
-#include "../OperationFactory.h"
+#include "../OperationFactories.h"
 #include "../../../Operations/DeserializationOperation/DeserializationOperation.h"
 #include "../../../ServiceConfig.h"
 
@@ -11,5 +11,5 @@ bool  DeserializationOperationFactory::canCreate(ServiceConfig* config)
 
 Operation* DeserializationOperationFactory::create(ServiceConfig* config)
 {
-	return (new DeserializationOperation(config->deserializationOperationData));
+	return new DeserializationOperation(config->deserializationOperationData);
 }

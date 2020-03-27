@@ -16,7 +16,6 @@ using namespace std;
 int main()
 {
 	string t;
-	
 	string reConOp = "Owrekog";
 	int netOp = 234;
 	LogOperationEnumData logOp = LogOperationEnumData::debug; //только так, ибо enum class

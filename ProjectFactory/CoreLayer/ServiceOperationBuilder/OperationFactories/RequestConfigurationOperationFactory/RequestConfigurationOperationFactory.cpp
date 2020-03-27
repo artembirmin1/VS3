@@ -1,6 +1,6 @@
 #include <iostream>
 #include "RequestConfigurationOperationFactory.h"
-#include "../OperationFactory.h"
+#include "../OperationFactories.h"
 #include "../../../Operations/RequestConfigurationOperation/RequestConfigurationOperation.h"
 #include"../../../ServiceConfig.h"
 
@@ -11,5 +11,5 @@ bool  RequestConfigurationOperationFactory::canCreate(ServiceConfig* config)
 
 Operation* RequestConfigurationOperationFactory::create(ServiceConfig* config)
 {
-	return (new RequestConfigurationOperation(config->requestConfigurationOperationData));
+	return new RequestConfigurationOperation(config->requestConfigurationOperationData);
 }

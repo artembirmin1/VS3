@@ -1,6 +1,6 @@
 #include <iostream>
 #include "NetworkOperationFactory.h"
-#include "../OperationFactory.h"
+#include "../OperationFactories.h"
 #include "../../../Operations/NetworkOperation/NetworkOperation.h"
 #include "../../../ServiceConfig.h"
 
@@ -13,5 +13,5 @@ Operation* NetworkOperationFactory::create(ServiceConfig* config)
 {
 	
 	
-	return (new NetworkOperation(config->networkOperationData));
+	return new NetworkOperation(config->networkOperationData);
 }

@@ -2,12 +2,12 @@
 #define _SOF_H_
 
 #include <iostream>
-#include "../OperationFactory.h"
+#include "../OperationFactories.h"
 #include "../../../Operations/SerializationOperation/SerializationOperation.h"
 #include "../../../ServiceConfig.h"
 
 template<typename T>
-class SerializationOperationFactory : public OperationFactory
+class SerializationOperationFactory : public OperationFactories
 {
 public:
 	bool canCreate(ServiceConfig* config);
