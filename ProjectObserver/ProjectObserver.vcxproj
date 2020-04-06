@@ -138,6 +138,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="PresentationLayer\Screens\LanguagesScreen\LanguagesScreen.cpp" />
+    <ClCompile Include="PresentationLayer\Screens\ProfileScreen\ProfileScreen.cpp" />
+    <ClCompile Include="PresentationLayer\Screens\Screen\Screen.cpp" />
+    <ClCompile Include="PresentationLayer\Screens\SettingsScreen\SettingsScreen.cpp" />
+    <ClCompile Include="PresentationLayer\Views\Button\Button.cpp" />
+    <ClCompile Include="PresentationLayer\Views\Cell\Cell.cpp" />
+    <ClCompile Include="PresentationLayer\Views\Label\Label.cpp" />
+    <ClCompile Include="PresentationLayer\Views\Table\Table.cpp" />
+    <ClCompile Include="PresentationLayer\Views\View\View.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
