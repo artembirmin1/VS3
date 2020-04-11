@@ -6,6 +6,7 @@
 #include <string>
 #include "../View/View.h"
 
+
 using namespace std;
 
 class Button : public View
@@ -13,6 +14,7 @@ class Button : public View
 public:
 	Button(string str) : View(str)
 	{
+		
 	}
 	string getDescription();
 };

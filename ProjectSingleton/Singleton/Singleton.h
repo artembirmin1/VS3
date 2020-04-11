@@ -12,11 +12,11 @@ private:
 	
 	static Singleton* item;
 	int value;
-
-public:
 	Singleton()
 	{
 	}
+public:
+	
 	int getValue();
 	void setValue(int a);
 	Singleton(const Singleton&) = delete;

@@ -1,4 +1,4 @@
-
+#pragma once
 #ifndef _V_H_
 #define _V_H_
 
@@ -12,8 +12,10 @@ class View
 public:
 	View(string str) : title(str)
 	{
+		
 	}
 	string title;
 };
+
 
 #endif
