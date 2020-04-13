@@ -1,3 +1,5 @@
+#ifndef _LS_H_
+#define _LS_H_
 
 #include <iostream>
 #include <string>
@@ -9,9 +11,13 @@
 
 using namespace std;
 
-class LanguagesScreen : Screen
+class LanguagesScreen : public Screen
 {
 public:
 	LanguagesScreen();
+	~LanguagesScreen();
 	string getDescription();
+	void localize(Language) override;
 };
+
+#endif

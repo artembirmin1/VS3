@@ -1,3 +1,6 @@
+#ifndef _SS_H_
+#define _SS_H_
+
 
 #include <iostream>
 #include <string>
@@ -13,5 +16,9 @@ class SettingsScreen : public Screen
 {
 public:
 	SettingsScreen();
+	~SettingsScreen();
 	string getDescription();
+	void localize(Language) override;
 };
+
+#endif

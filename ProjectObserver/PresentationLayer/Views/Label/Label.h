@@ -10,7 +10,7 @@ using namespace std;
 class Label : public View
 {
 public:
-	Label(string str) : View(str)
+	Label()
 	{
 	}
 	string getDescription();

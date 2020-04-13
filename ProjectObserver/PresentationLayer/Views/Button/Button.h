@@ -12,7 +12,7 @@ using namespace std;
 class Button : public View
 {
 public:
-	Button(string str) : View(str)
+	Button()
 	{
 		
 	}

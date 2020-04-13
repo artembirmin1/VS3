@@ -8,10 +8,11 @@
 #include "../../Views/Button/Button.h"
 #include "../../Views/Label/Label.h"
 #include "../../Views/Table/Table.h"
+#include "../../Localization/Localizable/Localizable.h"
 
 using namespace std;
 
-class Screen
+class Screen : public Localizable
 {
 public:
 	Table* screenTable = NULL;

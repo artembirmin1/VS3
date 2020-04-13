@@ -5,13 +5,12 @@
 #include<iostream>
 #include <vector>
 #include <string>
-#include "../../Views/View/View.h"
 
 using namespace std;
 
 class Localizable;
 
-enum Language
+enum class Language
 {
 	English,
 	Russian
@@ -19,11 +18,24 @@ enum Language
 
 class Localizer
 {
+private:
+	static Localizer* singleLocalizer;
+	Localizer()
+	{
+	}
 public:
-	vector <Localizable*> Localizables;
+	Localizer(const Localizer&) = delete;
+	Localizer& operator=(Localizer&) = delete;
+	static Localizer* getInstance();
+
+	Language currentLanguage = Language::Russian;
+	vector <Localizable*> localizables;
 	void setLanguage(Language lang);
-	static void subscribe(Localizable*);
-	static void unsubscribe(Localizable*);
+	void subscribe(Localizable*);
+	void unsubscribe(Localizable*);
 };
 
+
+
+//vector <Localizable*> Localizer::Localizables = { NULL };
 #endif

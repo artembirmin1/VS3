@@ -10,7 +10,8 @@
 class Table : public View
 {
 public:
-	Table(string str) : View(str)
+	Table(
+	) 
 	{
 	}
 	vector <Cell*> cells;

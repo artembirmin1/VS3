@@ -10,7 +10,7 @@ using namespace std;
 class View
 {
 public:
-	View(string str) : title(str)
+	View()
 	{
 		
 	}

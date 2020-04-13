@@ -12,7 +12,7 @@
 class Cell : public View
 {
 public:
-	Cell(string str) : View(str)
+	Cell()
 	{
 	}
 	vector <Button*> buttons;

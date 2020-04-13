@@ -45,5 +45,19 @@
     <ClCompile Include="PresentationLayer\Screens\SettingsScreen\SettingsScreen.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="PresentationLayer\Localization\Localizable\Localizable.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="PresentationLayer\Localization\Localizer\Localizer.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PresentationLayer\Localization\Localizer\Localizer.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="PresentationLayer\Localization\Localizable\Localizable.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
