@@ -7,8 +7,9 @@ using namespace std;
 
 int main()
 {
-	Singleton* item = new Singleton;
+	Singleton* item = Singleton::getInstance();
 	item->setValue(777);
+	
 	ClassA* itemA = new ClassA(item);
 	ClassB* itemB = new ClassB(item);
 
