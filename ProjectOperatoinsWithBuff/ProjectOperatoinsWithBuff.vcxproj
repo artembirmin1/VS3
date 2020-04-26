@@ -99,7 +99,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <EnableModules>true</EnableModules>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -130,7 +131,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <EnableModules>true</EnableModules>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -142,6 +144,7 @@
   <ItemGroup>
     <ClCompile Include="CoreLayer\Buffer\Buffer.cpp" />
     <ClCompile Include="CoreLayer\Operations\ConversionOperations\ConversionOperation.cpp" />
+    <ClCompile Include="CoreLayer\Operations\OutputOperation\OutputOperation.cpp" />
     <ClCompile Include="CoreLayer\Operations\SquaringOperation\SquaringOperation.cpp" />
     <ClCompile Include="CoreLayer\Operations\SummationOperation\SummationOperation.cpp" />
     <ClCompile Include="CoreLayer\ServiceOperationBuilder\Chainer\Chainer.cpp" />

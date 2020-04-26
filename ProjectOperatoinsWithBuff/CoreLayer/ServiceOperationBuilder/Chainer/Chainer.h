@@ -11,11 +11,11 @@
 
 using namespace std;
 
-template <typename T>
 class Chainer
 {
 public:
-	void chain(T* first, T* second);
+	template <typename I, typename M, typename O>
+	void chain(GenericOperation<I,M>* first, GenericOperation<M,O>* second);
 };
 
 #include "Chainer.cpp"

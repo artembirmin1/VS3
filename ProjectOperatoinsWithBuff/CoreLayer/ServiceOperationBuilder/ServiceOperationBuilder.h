@@ -10,6 +10,7 @@
 #include "../Operations/ConversionOperations/ConversionOperation.h"
 #include "../Operations/SquaringOperation/SquaringOperation.h"
 #include "../Operations/SummationOperation/SummationOperation.h"
+#include "../Operations/OutputOperation/OutputOperation.h"
 
 using namespace std;
 

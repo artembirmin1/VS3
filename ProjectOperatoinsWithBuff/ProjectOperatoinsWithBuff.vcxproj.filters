@@ -36,6 +36,9 @@
     <ClCompile Include="CoreLayer\Operations\ConversionOperations\ConversionOperation.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="CoreLayer\Operations\OutputOperation\OutputOperation.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CoreLayer\Operations\Operation.h">

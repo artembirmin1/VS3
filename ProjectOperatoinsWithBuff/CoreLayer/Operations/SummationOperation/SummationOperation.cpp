@@ -8,6 +8,5 @@ void SummationOperation::execute()
 	{
 		sum += item;
 	}
-	cout << sum;
 	output->data = sum;
 }

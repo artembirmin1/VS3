@@ -1,34 +1,3 @@
-//
-//#include <array>
-//#include <iostream>
-//#include <string_view>
-//#include <tuple>
-//#include <type_traits>
-//
-//using namespace std;
-//
-//namespace a::b::c
-//{
-//    inline constexpr std::string_view str{ "hello" };
-//}
-//
-//template <class... T>
-//std::tuple<std::size_t, std::common_type_t<T...>> sum(T... args)
-//{
-//    return { sizeof...(T), (args + ...) };
-//}
-//
-//int main()
-//{
-//    auto [iNumbers, iSum] { sum(1, 2, 3) };
-//    std::cout << a::b::c::str << ' ' << iNumbers << ' ' << iSum << '\n';
-//
-//    std::array arr{ 1, 2, 3 };
-//
-//    std::cout << std::size(arr) << '\n';
-//
-//    return 0;
-//}
 
 #include <iostream>
 #include <vector>
@@ -46,25 +15,15 @@ using namespace std;
 
 int main()
 {
-
 	typedef std::numeric_limits< double > dbl;
 	cout.precision(10);
-	
-
-	if (__cplusplus == 201703L) std::cout << "C++17\n";
-	else if (__cplusplus == 201402L) std::cout << "C++14\n";
-	else if (__cplusplus == 201103L) std::cout << "C++11\n";
-	else if (__cplusplus == 199711L) std::cout << "C++98\n";
-	else std::cout << "pre-standard C++\n";
-
-	/*ServiceOperationBuilder* SOB = new ServiceOperationBuilder;
-	vector<Operation*> operations = SOB->obtainOperations("2 ghbug 4");
+	ServiceOperationBuilder* SOB = new ServiceOperationBuilder;
+	vector<Operation*> operations = SOB->obtainOperations("2 ghbug 4.2");
 
 	for (Operation* operation : operations)
 	{
 		operation->execute();
-	}*/
-	
+	}
 
 	
 

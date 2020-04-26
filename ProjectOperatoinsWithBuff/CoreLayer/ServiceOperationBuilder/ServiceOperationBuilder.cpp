@@ -8,11 +8,22 @@ vector<Operation*> ServiceOperationBuilder::obtainOperations(string str)
 
 
 
+	ConversionOperation* converOper = new ConversionOperation;
+	SquaringOperation* squarOper = new SquaringOperation;
+	SummationOperation* sumOper = new SummationOperation;
+	OutputOperation* outOper = new OutputOperation;
+	operations.push_back(converOper);
+	operations.push_back(squarOper);
+	operations.push_back(sumOper);
+	operations.push_back(outOper);
 
-	//ConversionOperation* converOp = new ConversionOperation;
-	//SquaringOperation* squarOper = new SquaringOperation;
-	//SummationOperation* sumOper = new SummationOperation;
-	//
+	Chainer* chainer = new Chainer;
+
+	chainer->chain(converOper, squarOper);
+	converOper->input->data = str;
+	chainer->chain(squarOper, sumOper);
+	chainer->chain(sumOper, outOper);
+
 	//Chainer<Operation>* chainer = new Chainer<Operation>;
 	//chainer->chain(converOp, squarOper);
 
